@@ -1,0 +1,14 @@
+<header>
+  <div class="max-width-4 mx-auto clearfix py2">
+    <div class="logo left">
+      <a href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
+    </div>
+    <nav class="nav right">
+      {% for page in site.pages %}
+        {% if page.title %}
+          <a class="ml1" href="{{ page.url | prepend: base_url }}">{{ page.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>
